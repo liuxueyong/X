@@ -27,15 +27,6 @@
   <!-- Tweaks for older IEs --><!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  <!-- Load icon -->
-  <script>
-   $(document).ready(function(){
-   $("#load-l").hide();
-   $("#load-f").hide();
-   $("#load").hide();
-   });
-  </script>
-
 </head>
 <body>
   <div id="all">
@@ -287,9 +278,20 @@
   <script>
     window.onload=function(){
        if (location.href.indexOf("?xyz=")<0){
- 　　      location.href=location.href+"?xyz="+Math.random();
+ 　　       location.href=location.href+"?xyz="+Math.random();
+		    $("#load-l").hide();
+            $("#load-f").hide();
+            $("#load").hide();
        }
     }
+  </script>
+  <!-- Load icon -->
+  <script>
+   $(document).ready(function(){
+   $("#load-l").hide();
+   $("#load-f").hide();
+   $("#load").hide();
+   });
   </script>
 
 </body>
