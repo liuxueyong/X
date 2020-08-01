@@ -2863,3 +2863,41 @@ QR CODE
   transform: scale(1);
   opacity: 1;
 }
+
+/*
+
+=========================================================
+Text blink
+=========================================================
+
+*/
+@keyframes blink{
+  0%{opacity: 1;}
+  100%{opacity: 0;} 
+}
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+    0% {opacity: 1; } 
+    100% { opacity: 0;}
+}
+@-o-keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.blink{
+    color: #b2b8c2;
+	font-size: 0.6em;
+    animation: blink 1s linear infinite;  
+    /* 其它浏览器兼容性前缀 */
+    -webkit-animation: blink 1s linear infinite;
+    -moz-animation: blink 1s linear infinite;
+    -ms-animation: blink 1s linear infinite;
+    -o-animation: blink 1s linear infinite;
+}
