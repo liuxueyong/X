@@ -38,7 +38,7 @@
           <div class="sidebar-content">
             <h1 class="sidebar-heading"> <a href="index.html">狸の收纳盒</a></h1>
             <p class="sidebar-p">I HAVE A DREAM</p>
-            <p class="sidebar-p">&nbsp;<nobr class="blink">▂</nobr></p>
+            <p class="sidebar-p" id="load">&nbsp;<nobr class="blink">▂</nobr></p>
             <ul class="sidebar-menu">
                 <!-- Link-->
                 <li class="sidebar-item"><a href="index.html" class="sidebar-link active">一盒 / Box</a></li>
@@ -277,6 +277,12 @@
  　　      location.href=location.href+"?xyz="+Math.random();
        }
     }
+  </script>
+	
+  <script>
+   $(document).ready(function(){
+   $("#load").hide();
+   });
   </script>
 
 </body>
