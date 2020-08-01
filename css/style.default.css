@@ -759,8 +759,8 @@ ABOUT
 .box-masonry {
   background: #fff;
   position: relative;
-  -webkit-box-shadow: 0 0 10px #aaa;
-  box-shadow: 0 0 10px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
@@ -839,8 +839,8 @@ ABOUT
 
 .box-masonry:hover {
   margin-top: -5px;
-  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .box-masonry:hover .box-masonry-hover-text-header {
