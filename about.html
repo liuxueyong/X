@@ -38,7 +38,8 @@
           <div class="sidebar-content">
             <h1 class="sidebar-heading"> <a href="index.html">狸の收纳盒</a></h1>
             <p class="sidebar-p">I HAVE A DREAM</p>
-            <p class="sidebar-p">&nbsp;<nobr class="blink">▂</nobr></p>
+            <p class="sidebar-p"><i class="fa fa-circle-o-notch fa-spin fa-fw" id="load-l"></i>
+            <nobr class="blink" id="load-f"> LOADING</nobr>&nbsp;</p>
             <ul class="sidebar-menu">
                 <!-- Link-->
                 <li class="sidebar-item"><a href="index.html" class="sidebar-link">一盒 / Box</a></li>
@@ -144,6 +145,14 @@
   <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="vendor/masonry-layout/masonry.pkgd.min.js"></script>
   <script src="js/front.js"></script>
+  <!-- Load icon -->
+  <script>
+   $(document).ready(function(){
+   $("#load-l").hide();
+   $("#load-f").hide();
+   $("#load").hide();
+   });
+  </script>
 </body>
 </html>
 	
