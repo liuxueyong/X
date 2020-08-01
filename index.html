@@ -38,7 +38,8 @@
           <div class="sidebar-content">
             <h1 class="sidebar-heading"> <a href="index.html">狸の收纳盒</a></h1>
             <p class="sidebar-p">I HAVE A DREAM</p>
-            <p class="sidebar-p" id="load">&nbsp;<nobr class="blink">▂</nobr></p>
+            <p class="sidebar-p"><i class="fa fa-circle-o-notch fa-spin fa-fw" id="load-l"></i>
+            <nobr class="blink" id="load-f"> LOADING</nobr>&nbsp;</p>
             <ul class="sidebar-menu">
                 <!-- Link-->
                 <li class="sidebar-item"><a href="index.html" class="sidebar-link active">一盒 / Box</a></li>
@@ -66,7 +67,10 @@
         <div class="col-md-8 col-lg-9 content-column">
           <div class="small-navbar d-flex d-md-none">
             <button type="button" data-toggle="offcanvas" class="btn btn-outline-primary"> <i class="fa fa-align-left mr-2"></i>BOX</button>
-            <h1 class="small-navbar-heading" id="today"><script src="js/today.js" type="text/x-javascript"></script></h1>
+            <h1 class="small-navbar-heading">
+			 <i class="fa fa-refresh fa-spin fa-fw" id="load" style="color: #006fc6"></i>
+          <span class="sr-only">Loading...</span><nobr id="today">
+		  <script src="js/today.js" type="text/x-javascript"></script></nobr></h1>
           </div>
 			
           <div class="grid row" style="font-family: PixelFont;">	
@@ -281,6 +285,8 @@
 	
   <script>
    $(document).ready(function(){
+   $("#load-l").hide();
+   $("#load-f").hide();
    $("#load").hide();
    });
   </script>
