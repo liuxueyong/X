@@ -2867,7 +2867,7 @@ QR CODE
 /*
 
 =========================================================
-Text blink
+Text  Blink Print
 =========================================================
 
 */
@@ -2891,7 +2891,7 @@ Text blink
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
-.blink{
+.blink {
     color: #007bff;
     animation: blink 1s linear infinite;  
     /* 其它浏览器兼容性前缀 */
@@ -2899,4 +2899,23 @@ Text blink
     -moz-animation: blink 1s linear infinite;
     -ms-animation: blink 1s linear infinite;
     -o-animation: blink 1s linear infinite;
+}
+
+@keyframes typing {
+	from {
+	width:0;
+}
+}@keyframes blink-caret {
+	50% {
+	border-color:transparent;
+}
+}
+
+.print-text {
+	border-right:.1em solid;
+	width:19.5em;
+	white-space:nowrap;
+	overflow:hidden;
+	animation:typing 3s steps(25,end),/* # of steps = # of chars */
+		 blink-caret .5s step-end infinite alternate;
 }
