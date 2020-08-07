@@ -274,7 +274,28 @@
   <script src="vendor/masonry-layout/masonry.pkgd.min.js"></script>
   <script src="js/front.js"></script>
 	
-  <!-- 页面显示动效 -->
+  <!-- 加载完成后刷新 -->
+  <script>
+    window.onload=function(){
+       if (location.href.indexOf("?xyz=")<0){
+ 　　       location.href=location.href+"?xyz="+Math.random();
+		    $("#load-l").hide();
+            $("#load-f").hide();
+            $("#load").hide();
+       }
+    }
+  </script>
+	
+  <!-- 加载时展示图标 -->
+  <script>
+   $(document).ready(function(){
+   $("#load-l").hide();
+   $("#load-f").hide();
+   $("#load").hide();
+   });
+  </script>
+	
+  <!-- 内容块过渡动效 -->
   <script>
         // 获取浏览器可见区域高度
   var window_height= document.documentElement.clientHeight;
@@ -315,27 +336,7 @@
         }
      my_animation();
   </script>
-	
-  <!-- 加载完成后刷新 >
-  <script>
-    window.onload=function(){
-       if (location.href.indexOf("?xyz=")<0){
- 　　       location.href=location.href+"?xyz="+Math.random();
-		    $("#load-l").hide();
-            $("#load-f").hide();
-            $("#load").hide();
-       }
-    }
-  </script>< -->
-	
-  <!-- 加载时展示图标 -->
-  <script>
-   $(document).ready(function(){
-   $("#load-l").hide();
-   $("#load-f").hide();
-   $("#load").hide();
-   });
-  </script>
+
 </body>
 </html>
 
