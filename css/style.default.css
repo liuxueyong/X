@@ -201,6 +201,34 @@ body {
 /*
 
 =========================================================
+ANIMATION  * 页面动效
+=========================================================
+
+*/
+@keyframes f-up {
+  0% {
+  will-change: transform;                 /*优化动画卡顿1*/
+  /*position:relative;                      优化动画卡顿2*/
+  /*z-index: 1;                             优化动画卡顿2*/
+  opacity: 0;                         /*初始状态 透明度为0*/
+  transform:translateY(100px);    /*初始状态 文档流下100px*/
+  }
+  100% {
+  opacity: 1;                         /*结尾状态 透明度为1*/
+  transform:translateY(0px);        /*初始状态 恢复正常位置*/
+  }
+}
+
+  .f-up{
+     animation-name: f-up;                    /*动画名称*/
+     animation-duration: 0.8s;             /*动画持续时间*/
+     animation-iteration-count: 1;            /*动画次数*/
+     animation-delay: 0s;                     /*延迟时间*/
+}
+
+/*
+
+=========================================================
 SIDEBAR + RIGHT COLUMN
 =========================================================
 
