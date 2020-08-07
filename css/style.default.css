@@ -758,18 +758,13 @@ ABOUT
 .box-masonry {
   background: #fff;
   position: relative;
-  -webkit-box-shadow: 0 0 7.5px #aaa;
-  box-shadow: 0 0 7.5px #aaa;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2rem;
-}
-
-.box-masonry {
-  outline: solid 2.5px #2c2c2c;
-  box-sizing: content-box;
 }
 
 .box-masonry h4 {
