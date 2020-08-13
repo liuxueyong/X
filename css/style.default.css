@@ -833,7 +833,7 @@ ABOUT
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: #555;
+  color: #fff;
 }
 
 .box-masonry .box-masonry-hover-text-header p {
@@ -906,8 +906,9 @@ ABOUT
   top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .box-masonry .box-masonry-image.with-hover-icon:after {
@@ -925,7 +926,7 @@ ABOUT
   content: '\f24d';
   text-align: center;
   font-size: 3.125rem;
-  color: #555;
+  color: #fff;
 }
 
 .box-masonry .box-masonry-image:hover {
