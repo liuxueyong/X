@@ -14,13 +14,6 @@
   src:url("../font/FZ_Pixel_12.ttf")
 }
 
-* {
-  cursor: url("../img/cursor0.ico"),auto;
-}
-a,h4,button .btn {
-  cursor: url("../img/cursor1.ico"),pointer;
-}
-
 body { 
   animation: fadeInAnimation ease 1s; 
   animation-iteration-count: 1; 

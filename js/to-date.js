@@ -4,3 +4,4 @@
         var m = date.getMonth()+1;
         var d = date.getDate(); 
         document.getElementById("ymd").innerHTML = "# "+y+" / "+m+" / "+d;
+        document.getElementById("date1").innerHTML = d;
