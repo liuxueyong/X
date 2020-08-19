@@ -787,6 +787,7 @@ ABOUT
   text-overflow: ellipsis;
   margin-bottom: 2rem;
   border-radius: 10px;
+  user-select: none; /*禁止选择*/
 }
 
 .box-masonry h4 {
