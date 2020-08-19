@@ -1,5 +1,5 @@
 // JavaScript Document
-	var allmonths = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+	var allmonths = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
     var date = new Date();//可以在date中指定日期转换
     console.log( 
      date.getDate() + 
