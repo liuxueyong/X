@@ -184,13 +184,6 @@ button {
   color: #feee7d;
 }
 
-body {
-  background-image:
-	  linear-gradient(90deg, rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%),
-      linear-gradient(rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%); 
-  background-size: 15px 15px;
-}
-
 /*
 
 =========================================================
@@ -1820,7 +1813,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #111;
-  background-color: #fafafa;
+  background-color: #F0F0F0;
 }
 
 a {
