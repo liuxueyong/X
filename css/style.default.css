@@ -2939,3 +2939,10 @@ Text  Blink Print
 	animation:typing 3s steps(25,end),/* # of steps = # of chars */
 		 blink-caret .5s step-end infinite alternate;
 }
+
+.textnone{  /* 禁止选择 */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
