@@ -885,7 +885,7 @@ ABOUT
   display: block;
   position: relative;
   min-height: 6.25rem;
-  background: #ccc;
+  background: #fff; /* 卡片图像底色 */
 }
 
 .box-masonry .box-masonry-image.with-hover-overlay:before {
