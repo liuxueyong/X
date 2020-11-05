@@ -27,6 +27,30 @@
   <!-- Tweaks for older IEs --><!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	
+  <!-- 内容块过渡动效 移动设备判断 -->
+  <script type="text/javascript">  
+    function browserRedirect() {  
+    var sUserAgent = navigator.userAgent.toLowerCase();  
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+    // 浏览设备为  
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {  
+
+	document.write('<script type="text/javascript" charset="utf-8" src="js/ani-go.js"><\/script>'); 	
+    } else {  
+     //空值	（ 除移动端外 ）
+    }  
+    }  
+    browserRedirect();  
+  </script>
+	
 </head>
 <body>
   <div id="all">
@@ -292,54 +316,12 @@
   <!-- 加载时展示图标 -->
   <script>
    $(document).ready(function(){
-   $("#load-l").hide();
-   $("#load-f").hide();
-   $("#load").hide();
+    $("#load-l").hide();
+    $("#load-f").hide();
+    $("#load").hide();
    });
   </script>
 	
-  <!-- 内容块过渡动效 -->
-  <script>
-        // 获取浏览器可见区域高度
-  var window_height= document.documentElement.clientHeight;
-        // 用户手动修改浏览器可见区域高度时修改变量
-  window.onresize=function () {window_height=document.documentElement.clientHeight;};
-        // 获取所需效果元素
-  var My_vanwee=document.getElementsByClassName('box-masonry');
-        // 鼠标滚轮滚动执行方法
-  window.onscroll = function(){
-        // 获取鼠标滚轮滚动距离
-  var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            // 循环类vanwee
-            for (var k=0;k<My_vanwee.length;k++){
-                if (My_vanwee[k].classList.contains("f-up")==false && _scrollTop >= getOffsetTop(My_vanwee[k]) - window_height && _scrollTop<= getOffsetTop(My_vanwee[k])){
-                    My_vanwee[k].classList.add("f-up");
-                }
-            }
-  };
-        // 判断元素父集是否有已定位元素
-        function getOffsetTop(ele) {
-            var rtn = ele.offsetTop;
-            var o = ele.offsetParent;
-            while(o!=null) {
-                    rtn += o.offsetTop;
-                    o = o.offsetParent;
-            }
-            return rtn;
-        }
-        // 滚动条等于0时执行第一屏效果
-        function my_animation() {
-            var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            // 效果方法
-            for (var k=0;k<My_vanwee.length;k++) {
-                if (My_vanwee[k].classList.contains("f-up")==false && _scrollTop>= getOffsetTop(My_vanwee[k]) - window_height && _scrollTop<= getOffsetTop(My_vanwee[k])){
-                    My_vanwee[k].classList.add("f-up");
-                }
-            }
-        }
-     my_animation();
-  </script>
-
 </body>
 </html>
 
