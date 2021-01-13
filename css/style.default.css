@@ -2976,3 +2976,43 @@ Text  Blink Print
 	-ms-user-select: none;
 	user-select: none;
 }
+
+/*
+
+=========================================================
+    [ 获取 ] 按钮样式
+=========================================================
+
+*/
+
+.goto-btn {
+	width: 90px;
+	height: 30px;
+	border-radius: 20px;
+	position: absolute;
+	right: 30px;
+	background: #f0f0f0;
+	color: #1473E6;
+	outline: none;
+	border: none;
+	font-weight: 600;
+	font-size: 110%;
+	font-family: MiLan;
+	letter-spacing: 1px;
+	transform: background 0.5s;
+	-moz-transition: background 0.5s;
+	-webkit-transition: background 0.5s;
+	-o-transition: background 0.5s;
+}
+.goto-btn:hover {
+	background: #e0e0e0;
+}
+.goto-btn:focus {
+	background: #1473E6;
+	color: #fff;
+}
+@media (min-width: 576px) { /* 576PX 隐藏按钮元素 */
+.goto-btn {
+	visibility: hidden;
+	}
+}
