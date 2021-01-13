@@ -812,8 +812,8 @@ ABOUT
 .box-masonry {
   background: #fff;
   position: relative;
-  -webkit-box-shadow: 0 0 3px #aaa;
-  box-shadow: 0 0 3px #aaa;
+  -webkit-box-shadow: 0 0 2px #aaa;
+  box-shadow: 0 0 2px #aaa;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
