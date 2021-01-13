@@ -2987,16 +2987,15 @@ Text  Blink Print
 
 .goto-btn {
 	width: 90px;
-	height: 30px;
+	height: 28px;
 	border-radius: 20px;
 	position: absolute;
-	right: 30px;
+	right: 25px;
 	background: #f0f0f0;
 	color: #1473E6;
 	outline: none;
 	border: none;
 	font-weight: 600;
-	font-size: 110%;
 	font-family: MiLan;
 	letter-spacing: 1px;
 	transform: background 0.5s;
