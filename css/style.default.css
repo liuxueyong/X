@@ -198,6 +198,7 @@ ANIMATION  * 页面动效
 =========================================================
 
 */
+
 @keyframes f-up {
   0% {
   will-change: transform;                 /*优化动画卡顿1*/
@@ -212,11 +213,13 @@ ANIMATION  * 页面动效
   }
 }
 
+@media (max-width: 576px) {
   .f-up{
      animation-name: f-up;                    /*动画名称*/
      animation-duration: 0.8s;             /*动画持续时间*/
      animation-iteration-count: 1;            /*动画次数*/
      animation-delay: 0s;                     /*延迟时间*/
+}
 }
 
 /*
