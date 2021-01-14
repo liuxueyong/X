@@ -3058,6 +3058,7 @@ Text  Blink Print
   }
 }
 .load-btn {
+  color: #d0d0d0;
   background-color: #f0f0f0;
   background: linear-gradient(100deg,
 	rgba(255,255,255,0)40%,
