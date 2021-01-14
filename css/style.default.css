@@ -3057,7 +3057,8 @@ Text  Blink Print
   visibility: hidden;
   }
 }
-.load-btn {
+.load-btn, .load-btn:hover, .load-btn:focus {
+  pointer-events: none;
   color: #d0d0d0;
   background-color: #f0f0f0;
   background: linear-gradient(100deg,
