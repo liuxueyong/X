@@ -184,7 +184,7 @@ button {
   color: #feee7d;
 }
 
-body {
+body {                                   /* 网格背景图层 */
   background-image:
 	  linear-gradient(90deg, rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%),
       linear-gradient(rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%); 
