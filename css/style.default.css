@@ -1,7 +1,7 @@
 /*
 
 =========================================================
-    GENERAL
+    基础样式
 =========================================================
 
 */
@@ -184,26 +184,19 @@ button {
   color: #feee7d;
 }
 
-body {                                   /* 网格背景图层 */
-  background-image:
-	  linear-gradient(90deg, rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%),
-      linear-gradient(rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%); 
-  background-size: 15px 15px;
-}
-
 /*
 
 =========================================================
-ANIMATION  * 页面动效
+    ANIMATION  * 页面动效
 =========================================================
 
 */
 
 @keyframes f-up {
   0% {
-  will-change: transform;                 /*优化动画卡顿1*/
-  /*position:relative;                      优化动画卡顿2*/
-  /*z-index: 1;                             优化动画卡顿3*/
+  will-change: transform;                     /*优化动画1*/
+  /*position:relative;                          优化动画2*/
+  /*z-index: 1;                                 优化动画3*/
   opacity: 0;                         /*初始状态 透明度为0*/
   transform:translateY(100px);    /*初始状态 文档流下100px*/
   }
@@ -225,7 +218,7 @@ ANIMATION  * 页面动效
 /*
 
 =========================================================
-滚动条样式优化
+    滚动条样式优化
 =========================================================
 
 */
@@ -255,7 +248,7 @@ ANIMATION  * 页面动效
 /*
 
 =========================================================
-SIDEBAR + RIGHT COLUMN
+    SIDEBAR + RIGHT COLUMN
 =========================================================
 
 */
@@ -461,7 +454,7 @@ SIDEBAR + RIGHT COLUMN
 /*
 
 =========================================================
-OFF-CANVAS SIDEBAR BEHAVIOUR
+    OFF-CANVAS SIDEBAR BEHAVIOUR
 =========================================================
 
 */
@@ -505,7 +498,7 @@ OFF-CANVAS SIDEBAR BEHAVIOUR
 /*
 
 =========================================================
-SERVICES / INTEGRATIONS
+    SERVICES / INTEGRATIONS
 =========================================================
 
 */
@@ -548,7 +541,7 @@ SERVICES / INTEGRATIONS
 /*
 
 =========================================================
-CUSTOMERS
+    CUSTOMERS
 =========================================================
 
 */
@@ -572,7 +565,7 @@ CUSTOMERS
 /*
 
 =========================================================
-SIGN UP FORM
+    SIGN UP FORM
 =========================================================
 
 */
@@ -596,7 +589,7 @@ label {
 /*
 
 =========================================================
-SOCIAL LINKS
+    社交网站链接
 =========================================================
 
 */
@@ -624,14 +617,6 @@ p.social a {
   border: solid 1px #999;
   color: #999;
   transition: all 0.3s;
-  /*
-             &.facebook {background-color: #4460ae; border-color: #4460ae;}
-             &.gplus {background-color: #c21f25; border-color: #c21f25;}
-             &.twitter {background-color: #3cf; border-color: #3cf;}
-             &.instagram {background-color: #cd4378; border-color: #cd4378;}
-             &.email {background-color: #4a7f45; border-color: #4a7f45;}
-             &.link {background-color: #871AFF; border-color: #871AFF;}
-             */
 }
 
 p.social a:hover {
@@ -693,7 +678,7 @@ p.social.social--big i {
 /*
 
 =========================================================
-COPYRIGHT
+    版权信息
 =========================================================
 
 */
@@ -713,7 +698,7 @@ COPYRIGHT
 /*
 
 =========================================================
-MAIN PORTFOLIO SLIDER
+    MAIN PORTFOLIO SLIDER
 =========================================================
 
 */
@@ -742,7 +727,7 @@ MAIN PORTFOLIO SLIDER
 /*
 
 =========================================================
-ABOUT
+    ABOUT
 =========================================================
 
 */
@@ -809,18 +794,29 @@ ABOUT
   z-index: 30;
 }
 
-.box-masonry {
+.box-masonry {                              /* 首页卡片 */   
   background: #fff;
   position: relative;
-  -webkit-box-shadow: 0 0 2px #aaa;
-  box-shadow: 0 0 2px #aaa;
-  -webkit-transition: all 0.3s;
+  -webkit-box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+  -webkit-transition: all 0.3s cubic-bezier(0,0,.5,1);
   transition: all 0.3s;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2rem;
+  user-select: none;                        /* 禁止选择 */
+}
+
+@media (min-width: 576px) {     /* 大于 576PX 圆角 10PX */
+.box-masonry {
   border-radius: 10px;
-  user-select: none; /*禁止选择*/
+  }
+}
+
+@media (max-width: 576px) {     /* 小于 576PX 圆角 18PX */
+.box-masonry {
+  border-radius: 18px;
+  }
 }
 
 .box-masonry h4 {
@@ -832,13 +828,13 @@ ABOUT
 }
 
 .box-masonry h4 a {
-  color: #000;
+  color: #1d1d1f;
   border-bottom: solid 1px transparent;
 }
 
 .box-masonry h4 a:hover {
   border-bottom: dotted 1px #006fc6;
-  color: #000;
+  color: #1d1d1f;
   text-decoration: none;
 }
 
@@ -887,10 +883,10 @@ ABOUT
   font-size: 3.125rem;
 }
 
-.box-masonry:hover {
-  margin-top: -5px;
-  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+.box-masonry:hover {                   /* 首页卡片：悬停 */
+  margin-top: -3px;
+  -webkit-box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+  box-shadow: 2px 4px 16px rgba(0,0,0,.16);
 }
 
 .box-masonry:hover .box-masonry-hover-text-header {
@@ -1048,7 +1044,7 @@ ABOUT
 /*
 
 =========================================================
-STYLE SWITCHER FOR DEMO
+    STYLE SWITCHER FOR DEMO
 =========================================================
 
 */
@@ -1080,25 +1076,25 @@ STYLE SWITCHER FOR DEMO
 
 ========================================================= 
    
-      THEMING OF THE BOOTSTRAP COMPONENTS           
+    导航 / 引导组件
 
 ========================================================= 
    
-    1 - NAVBAR
-    2 - BUTTONS
+    1 - NAVBAR 导航栏
+    2 - BUTTONS 顶部按钮
     3 - TYPE
     4 - PAGINATION
     5 - UTILITIES
     6 - FORMS
     7 - CODE
     8 - NAV
-    9 - CARD
+    9 - CARD 卡片
     10 - DROPDOWNS
    
 */
 
 /*
- * 1. NAVBAR
+ * 1. NAVBAR 导航栏
  */
 .navbar {
   padding: 0.5rem 1rem;
@@ -1201,7 +1197,7 @@ STYLE SWITCHER FOR DEMO
 }
 
 /*
- * 2. BUTTONS
+ * 2. BUTTONS 顶部按钮
  */
 .btn {
   font-weight: 400;
@@ -1209,7 +1205,7 @@ STYLE SWITCHER FOR DEMO
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 5px;
+  border-radius: 50px;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -1853,7 +1849,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #111;
-  background-color: #fafafa;
+  background-color: #f5f5f7;  /* 背景色 */
 }
 
 a {
@@ -2921,13 +2917,13 @@ code {
 /*
 
 =========================================================
-QR CODE
+    二维码
 =========================================================
 
 */
 
 /*
-*  Wechat Qrcode
+*   微信公众号
 */
 .qr-code-wx {
   position: relative;
@@ -2960,7 +2956,7 @@ QR CODE
 /*
 
 =========================================================
-Text  Blink Print
+    文本闪烁
 =========================================================
 
 */
@@ -2987,7 +2983,6 @@ Text  Blink Print
 .blink {
   color: #007bff;
   animation: blink 1s linear infinite;  
-  /* 其它浏览器兼容性前缀 */
   -webkit-animation: blink 1s linear infinite;
   -moz-animation: blink 1s linear infinite;
   -ms-animation: blink 1s linear infinite;
@@ -3013,7 +3008,7 @@ Text  Blink Print
   	 blink-caret .5s step-end infinite alternate;
 }
 
-.textnone{  /* 禁止选择 */
+.textnone{                                  /* 禁止选择 */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3023,7 +3018,7 @@ Text  Blink Print
 /*
 
 =========================================================
-    [ 获取 ] 按钮样式
+    首页「获取」按钮
 =========================================================
 
 */
@@ -3052,7 +3047,7 @@ Text  Blink Print
   background: #1473E6;
   color: #fff;
 }
-@media (min-width: 576px) { /* 576PX 隐藏按钮元素 */
+@media (min-width: 576px) {        /* 576PX 隐藏按钮元素 */
 .goto-btn {
   visibility: hidden;
   }
