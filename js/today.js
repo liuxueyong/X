@@ -8,19 +8,18 @@
 //英文日期
 function showLocale(objD){
 	var str,colorhead,colorfoot;	
-	var ww = objD.getDay();
-	if ( ww==0 ) colorhead="<font color=\"#9e9e9e\">";
-	if ( ww > 0 && ww < 6 ) colorhead="<font color=\"#9e9e9e\">";
-	if ( ww==6 ) colorhead="<font color=\"#9e9e9e\">";
-	if (ww==0) ww="SUNDAY";
-	if (ww==1) ww="MONDAY";
-	if (ww==2) ww="WEDNESDAY";
-	if (ww==3) ww="WEDNESDAY";
-	if (ww==4) ww="THURSDAY";
-	if (ww==5) ww="FRIDAY";
-	if (ww==6) ww="SATURDAY";
+	var week = objD.getDay();
+	if ( week==0 ) colorhead="<font color=\"#9e9e9e\">";  //定义星期天字体颜色
+	if ( week > 0 && week < 6 ) colorhead="<font color=\"#9e9e9e\">";  //默认字体颜色
+	if (week==0) week="SUNDAY";
+	if (week==1) week="MONDAY";
+	if (week==2) week="WEDNESDAY";
+	if (week==3) week="WEDNESDAY";
+	if (week==4) week="THURSDAY";
+	if (week==5) week="FRIDAY";
+	if (week==6) week="SATURDAY";
 	colorfoot="</font>"
-		str = colorhead + ww + colorfoot;
+		str = colorhead + week + colorfoot;
 	return(str);
 }
 	function tick(){
@@ -55,7 +54,7 @@ tick();
     document.getElementById('date2').innerText = allmonths[date.getMonth()]; 
 
 //随机语录库
-	var r=parseInt((Math.random()*20));
+	var r=parseInt((Math.random()*20));  //词条总数
 		arr=new Array();
 
 		arr[ 0]="LESS IS MORE";
