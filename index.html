@@ -23,9 +23,9 @@
   <link rel="Bookmark" type="image/x-icon" href="img/favicon.ico" />
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-  <!-- Tweaks for older IEs --><!--[if lt IE 9]>
+  <!-- Tweaks for older IEs --><!-- [if lt IE 9] >
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><! [endif] -->
 </head>
 <body>
   <div id="all">
@@ -38,18 +38,17 @@
 			  
             <h3><!-- 实时日历 -->
 			<p style="font-size: 80%">&nbsp;</p>
-			<nobr id="date1"  style="font-size:200%;">
-		    <script src="js/to-date.js" type="text/x-javascript"></script></nobr><nobr id="date2" style="font-size:70%;">
-		    <script src="js/by-lxy.js" type="text/x-javascript"></script></nobr></h3>
+			<nobr id="date1"  style="font-size:200%;"></nobr>
+			<nobr id="date2" style="font-size:70%;"></nobr></h3>
 			  
             <p class="sidebar-p">&nbsp;I HAVE A DREAM</p>
 			  
             <p class="sidebar-p"><i class="fa fa-circle-o-notch fa-spin fa-fw" id="load-l"></i>
             <nobr class="blink" id="load-f"> LOADING</nobr>&nbsp;</p>
             <ul class="sidebar-menu">
-                <!-- Link-->
+                <!-- Link -->
                 <li class="sidebar-item"><a href="index.html" class="sidebar-link active">一盒 / 1.Box</a></li>
-                <!-- Link-->
+                <!-- Link -->
                 <li class="sidebar-item"><a href="about.html" class="sidebar-link">关于 / About</a></li>
             </ul>
             <p class="social">
@@ -60,7 +59,7 @@
 				<a href="mailto:alpha@lxy.plus" data-animate-hover="pulse" class="email">
 					<i class="fa fa-envelope"></i></a></p>
             <div class="copyright text-center text-md-left">
-              <p class="credit">Copyright &copy; 2020 LXY<br>All Right Reserved</p>
+              <p class="credit">Copyright &copy; 2020 - <nobr id="date0"></nobr> LXY<br>All Right Reserved</p>
               
             </div>
           </div>
@@ -74,53 +73,22 @@
             <h1 class="small-navbar-heading">
 			 <i class="fa fa-refresh fa-spin fa-fw" id="load" style="color: #006fc6"></i>
              <span class="sr-only">Loading...</span>
-		     <nobr id="today">
-		     <script src="js/today.js" type="text/x-javascript"></script></nobr></h1>
+		     <nobr id="today"></nobr></h1>
           </div>
 			
           <div class="grid row" style="font-family: MiLan;">	
 			  
-		<!-- 随机语录库 -->	  
-        <script>
-		
-		    var r=parseInt((Math.random()*20));
-              arr=new Array();
-              arr[ 0]="LESS IS MORE";
-              arr[ 1]="等风来 不如追风去";
-              arr[ 2]="凡是过去 皆为序曲";
-              arr[ 3]="风雪一更 共度余生";
-              arr[ 4]="保持热爱 奔赴山海";
-              arr[ 5]="不忘初心 方得始终";
-              arr[ 6]="浮生皆纵 恍如一梦";
-              arr[ 7]="一日不见 如隔三秋";
-              arr[ 8]="夜色匆忙 暮暮是你";
-              arr[ 9]="生活明朗 万物可爱";
-              arr[10]="岁月漫长 值得等待";
-		      arr[11]="唯有热爱 能抵漫长岁月";
-		      arr[12]="世间美好 与你环环相扣";
-		      arr[13]="人生如逆旅 我亦是行人";
-		      arr[14]="斯人若彩虹 遇上方知有";
-		      arr[15]="仰望星空";
-		      arr[16]="你保护世界 我保护你";
-		      arr[17]="风月都浪漫 何况是你";
-		      arr[18]="美好的事情即将发生";
-		      arr[19]="所有的相遇 都是久别重逢";
-		      arr[20]="人生若只如初见";	
-			
-        </script>
 			  
-  
-			  
-     <!-- 收纳盒 --> <!-- 注意：按优先级排序 -->
+         <!-- 收纳盒 --> <!-- 注意：按优先级排序 -->
 			
 			  
 			<!-- HEY LXY -->
             <div class="col-md-6 col-lg-3 grid-item"> 
               <div class="box-masonry"> 
                 <div class="box-masonry-text text-pixel"> 
-                  <h4><script>document.write(arr[r]);</script></h4>
+                  <h4 id="yulu"></h4>
                   <div class="box-masonry-desription">
-                    <p style="font-family: PixelFont; text-align: right;" id="ymd"><script src="js/to-date.js" type="text/x-javascript"></script></p>
+                    <p style="text-align: right;" id="ymd"></p>
                   </div>
                 </div>
               </div>
@@ -290,6 +258,7 @@
   <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="vendor/masonry-layout/masonry.pkgd.min.js"></script>
   <script src="js/front.js"></script>
+  <script src="js/today.js"></script>
 	
   <!-- 加载完成后刷新 -->
   <script>
@@ -342,7 +311,7 @@
         // 滚动条等于0时执行第一屏效果
         function my_animation() {
             var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            // 效果方法
+            // 效果方式
             for (var k=0;k<My_vanwee.length;k++) {
                 if (My_vanwee[k].classList.contains("f-up")==false && _scrollTop>= getOffsetTop(My_vanwee[k]) - window_height && _scrollTop<= getOffsetTop(My_vanwee[k])){
                     My_vanwee[k].classList.add("f-up");
