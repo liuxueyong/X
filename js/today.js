@@ -5,31 +5,6 @@
  * By Alix
  */
 
-//英文日期
-function showLocale(objD){
-	var str,colorhead,colorfoot;	
-	var week = objD.getDay();
-	if ( week==0 ) colorhead="<font color=\"#9e9e9e\">";  //定义星期天字体颜色
-	if ( week > 0 && week < 6 ) colorhead="<font color=\"#9e9e9e\">";  //默认字体颜色
-	if (week==0) week="SUNDAY";
-	if (week==1) week="MONDAY";
-	if (week==2) week="WEDNESDAY";
-	if (week==3) week="WEDNESDAY";
-	if (week==4) week="THURSDAY";
-	if (week==5) week="FRIDAY";
-	if (week==6) week="SATURDAY";
-	colorfoot="</font>"
-		str = colorhead + week + colorfoot;
-	return(str);
-}
-	function tick(){
-	var today;
-	today = new Date();
-	document.getElementById("today").innerHTML = showLocale(today);
-	window.setTimeout("tick()", 1000);
-}
-tick();
-
 //数字日期
 	var date = new Date()
 	var y = date.getFullYear();
@@ -52,6 +27,32 @@ tick();
            date.getFullYear()
         );
     document.getElementById('date2').innerText = allmonths[date.getMonth()]; 
+
+//英文日期
+function showLocale(objD){
+	var str,colorhead,colorfoot;	
+	var week = objD.getDay();
+	if ( week==0 ) colorhead="<font color=\"#9e9e9e\">";  //定义星期天字体颜色
+	if ( week > 0 && week < 6 ) colorhead="<font color=\"#9e9e9e\">";  //默认字体颜色
+	if ( week==6 ) colorhead="<font color=\"#9e9e9e\">";  //定义星期六字体颜色
+	if (week==0) week="SUNDAY";
+	if (week==1) week="MONDAY";
+	if (week==2) week="WEDNESDAY";
+	if (week==3) week="WEDNESDAY";
+	if (week==4) week="THURSDAY";
+	if (week==5) week="FRIDAY";
+	if (week==6) week="SATURDAY";
+	colorfoot="</font>"
+		str = colorhead + week + colorfoot;
+	return(str);
+}
+	function tick(){
+	var today;
+	today = new Date();
+	document.getElementById("today").innerHTML = showLocale(today);
+	window.setTimeout("tick()", 1000);
+}
+tick();
 
 //随机语录库
 	var r=parseInt((Math.random()*20));  //词条总数
