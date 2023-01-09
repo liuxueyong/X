@@ -833,11 +833,18 @@ p.social.social--big i {
   border-bottom: solid 1px transparent;
 }
 
-@media (min-width: 576px){   /* 大于 576PX 标题超链：选中 */
+@media (min-width: 576px) {  /* 大于 576PX 标题超链：选中 */
 .box-masonry h4 a:hover {
   border-bottom: dotted 1px #006fc6;
   color: #1d1d1f;
   text-decoration: none;
+  }
+}
+
+@media (max-width: 576px) {  /* 小于 576PX 标题超链：禁用 */
+.box-masonry h4 a {
+  cursor: pointer;
+  pointer-events: none;
   }
 }
 
@@ -973,10 +980,10 @@ p.social.social--big i {
 
 .box-masonry-content-icon {             /* APP 卡片图标 */
   overflow: hidden;
-  min-width: 58px;
-  min-height: 58px;
-  width: 58px;
-  height: 58px;
+  min-width: 54px;
+  min-height: 54px;
+  width: 54px;
+  height: 54px;
   margin-right: 15px;
   border-radius: 10px;
 }
@@ -1006,7 +1013,7 @@ p.social.social--big i {
 
 @media (max-width: 576px) {
 .content-text-over,.content-text-over h4 {                           /* 文本超距折叠 */
-  margin-right: 5px;
+  margin-right: 2.5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3114,7 +3121,7 @@ code {
 */
 
 .btn-cta {                              /* CTA 按钮设置 */
-  width: 85px;
+  width: 80px;
   height: 26px;
   border-radius: 20px;
   position: absolute;
