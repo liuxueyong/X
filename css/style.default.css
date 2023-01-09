@@ -1003,6 +1003,22 @@ p.social.social--big i {
   font-size: 0.95rem;
 }
 
+.content-text-over,.content-text-over h4 {                           /* 文本超距折叠 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width:180px) and (max-width:360px) {
+.content-text-over {
+  width: 150px;
+  }
+}
+@media screen and (min-width:360px) and (max-width:576px) {
+.content-text-over,.content-text-over h4 {
+  width: 250px;
+  }
+}
+
 .box-masonry-content-cta {          /* 首页卡片 CTA 按钮 */
   width: 90px;
   margin-top: 5px;
