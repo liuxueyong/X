@@ -18,7 +18,7 @@
 	var allmonths = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
     var date = new Date();  //可以在date中指定日期转换
         console.log("I HAVE A DREAM \n\n\n\n— — —"),
-        console.log("MADE BY LXY"),
+        console.log("BY LXY"),
         console.log( 
            date.getDate() + 
                 ' ' +
