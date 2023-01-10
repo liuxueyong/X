@@ -1008,7 +1008,7 @@ p.social.social--big i {
 .box-masonry-content-text-near {   /* APP 窄行距卡片文本 */
   margin-top: -15px;
   color: #999;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 576px) {
