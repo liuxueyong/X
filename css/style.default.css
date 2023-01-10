@@ -2972,6 +2972,8 @@ code {
 
 .loading .image,
 .loading h4,
+.loading .box-masonry-image,
+.loading .box-masonry-content-icon,
 .loading .box-masonry-desription {
   background-color: #EDEDED;
   background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #ededed;
@@ -2980,7 +2982,8 @@ code {
   animation: 1s loading ease-in-out infinite;
 }
 
-.loading .box-masonry-content-text, .loading .box-masonry-content-text-near {
+.loading .box-masonry-content-text, 
+.loading .box-masonry-content-text-near {
   background-color: #EDEDED;
   background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #ededed;
   background-size: 200% 100%;
@@ -2994,9 +2997,13 @@ code {
 }
 
 @keyframes loading {
-	to {
-		background-position-x: -20%;
-	}
+  to {
+	background-position-x: -20%;
+  }
+}
+
+.loading img {                              /* 隐藏图片 */
+  visibility: hidden;
 }
 
 .loading h4 {
@@ -3016,7 +3023,11 @@ code {
   animation-delay: 0.06s;
 }
 
-.loading .box-masonry-desription p, .loading .box-masonry-content-text p, .loading .box-masonry-content-text-near p {     /* 隐藏文字 */
+.loading .box-masonry-desription p, 
+.loading .box-masonry-content-text p, 
+.loading .box-masonry-content-text-near p, 
+.loading .box-masonry-desription li, 
+.box-masonry-content-ver {     /* 隐藏文字 */
   z-index: -1;
   color: rgba(0,0,0,0);
 }
@@ -3104,7 +3115,7 @@ code {
 
 @keyframes typing {
   from {
-  width:0;
+    width:0;
   }
 }@keyframes blink-caret {
   50% {
@@ -3188,8 +3199,8 @@ code {
 
 .load-cta, .load-cta:hover, .load-cta:focus {
   pointer-events: none;
-  color: #d0d0d0;
-  background-color: #f0f0f0;
+  color: rgba(0,0,0,0);
+  background-color: #EDEDED;
   background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #f0f0f0;
   background-size: 200% 100%;
   background-position-x: 150%;
@@ -3197,7 +3208,7 @@ code {
 }
 
 @keyframes loading {                /* 页面加载时图标动画 */
-	to {
-		background-position-x: -20%;
+  to {
+	background-position-x: -20%;
 	}
 }
