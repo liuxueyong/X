@@ -3149,8 +3149,24 @@ code {
   color: #fff;
 }
 
+.btn-cta-none, .btn-cta-none:hover {
+  cursor: not-allowed;
+  color: #888888;
+  width: 80px;
+  height: 26px;
+  border-radius: 20px;
+  position: absolute;
+  right: 20px;
+  background: #f0f0f0;
+  font-size: 0.99rem;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 @media (min-width: 576px) {    /* 大于 576PX 隐藏按钮元素 */
-.btn-cta, .box-masonry-content-cta {
+.btn-cta, .box-masonry-content-cta, .btn-cta-none {
   display: none;
   }
 }
