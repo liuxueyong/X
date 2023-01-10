@@ -2970,22 +2970,27 @@ code {
 
 */
 
-:root {
-  --loading-grey: #ededed;
-}
-
 .loading .image,
 .loading h4,
 .loading .box-masonry-desription {
-  background-color: var(--loading-grey);
-  background: linear-gradient(100deg,
-	rgba(255,255,255,0)40%,
-	rgba(255,255,255,0.5)50%,
-	rgba(255,255,255,0)60%
-  ) #ededed;
+  background-color: #EDEDED;
+  background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #ededed;
   background-size: 200% 100%;
   background-position-x: 150%;
   animation: 1s loading ease-in-out infinite;
+}
+
+.loading .box-masonry-content-text, .loading .box-masonry-content-text-near {
+  background-color: #EDEDED;
+  background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #ededed;
+  background-size: 200% 100%;
+  background-position-x: 150%;
+  animation: 1s loading ease-in-out infinite;
+  max-height: 1.2rem;
+  max-width: 14rem;
+  border-radius: 4px;
+  color: rgba(0,0,0,0);
+  animation-delay: 0.06s;
 }
 
 @keyframes loading {
@@ -2996,14 +3001,24 @@ code {
 
 .loading h4 {
   min-height: 1.6rem;
+  max-width: 10rem;
   border-radius: 4px;
+  line-height:0;
+  font-size:0;
+  overflow:hidden;
   animation-delay: 0.05s;
 }
 
-.loading .box-masonry-desription {
-  min-height: 4rem;
+.loading .box-masonry-desription, .loading .box-masonry-content-text {
+  min-height: 1rem;
+  max-width: 20rem;
   border-radius: 4px;
   animation-delay: 0.06s;
+}
+
+.loading .box-masonry-desription p, .loading .box-masonry-content-text p, .loading .box-masonry-content-text-near p {     /* 隐藏文字 */
+  z-index: -1;
+  color: rgba(0,0,0,0);
 }
 
 /*
