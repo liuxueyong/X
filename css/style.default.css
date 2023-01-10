@@ -1026,7 +1026,8 @@ p.social.social--big i {
 }
 
 .box-masonry-content-ver {         /* CTA 按钮 APP 版本 */
-  width: 85px;
+  width: 80px;
+  margin-left: 5px;
   text-align: center;
   font-size: 9px;
   line-height: 1;
