@@ -2984,16 +2984,16 @@ code {
 
 .loading .box-masonry-content-text, 
 .loading .box-masonry-content-text-near {
-  font-size: 0.1rem;
-  margin-top: -0.65rem;
+  font-size: 0.75rem;                       /* 文字大小 */
+  margin-top: -0.65rem;                  /* 元素位置偏移 */
   background-color: #EDEDED;
   background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #ededed;
   background-size: 200% 100%;
   background-position-x: 150%;
   animation: 1s loading ease-in-out infinite;
-  max-width: 14rem;
+  max-width: 14rem;                         /* 最大宽度 */
   border-radius: 4px;
-  color: rgba(0,0,0,0);
+  color: rgba(0,0,0,0);                /* 透明度隐藏文字 */
   animation-delay: 0.06s;
 }
 
@@ -3007,8 +3007,8 @@ code {
   visibility: hidden;
 }
 
-.loading h4 {
-  min-height: 1.6rem;
+.loading h4 {                               /* 隐藏标题 */
+  min-height: 1.5rem;
   max-width: 10rem;
   border-radius: 4px;
   line-height:0;
@@ -3018,7 +3018,7 @@ code {
 }
 
 .loading .box-masonry-desription, .loading .box-masonry-content-text {
-  min-height: 1rem;
+  min-height: 0.75rem;
   max-width: 20rem;
   border-radius: 4px;
   animation-delay: 0.06s;
@@ -3028,7 +3028,7 @@ code {
 .loading .box-masonry-content-text p, 
 .loading .box-masonry-content-text-near p, 
 .loading .box-masonry-desription li, 
-.loading .box-masonry-content-ver {     /* 隐藏文字 */
+.loading .box-masonry-content-ver {         /* 隐藏文字 */
   z-index: -1;
   color: rgba(0,0,0,0);
 }
