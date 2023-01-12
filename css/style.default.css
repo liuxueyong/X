@@ -3181,7 +3181,7 @@ code {
   background: #e0e0e0;
 }
 
-.btn-cta:focus {
+.btn-cta:active {
   background: #1473E6;
   color: #fff;
 }
