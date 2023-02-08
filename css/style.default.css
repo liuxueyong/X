@@ -988,24 +988,24 @@ p.social.social--big i {
   border-radius: 10px;
 }
 
-.box-masonry-content-title {            /* APP 卡片标题 */
+.box-masonry-content-text {            /* APP 卡片标题 */
   margin-top: 4px;
   overflow: hidden;
   flex-grow: 2;
 }
 
-.box-masonry-content-text {             /* APP 卡片文本 */
+.box-masonry-content-desription {             /* APP 卡片文本 */
   color: #999;
   font-size: 0.9rem;
 }
 
 @media (min-width: 576px) {       /* 大于 576PX 变窄行距 */
-.box-masonry-content-text {
+.box-masonry-content-desription {
   margin-top: -15px;
   }
 }
 
-.box-masonry-content-text-near {   /* APP 窄行距卡片文本 */
+.box-masonry-content-desription-near {   /* APP 窄行距卡片文本 */
   margin-top: -15px;
   color: #999;
   font-size: 0.9rem;
@@ -2982,8 +2982,8 @@ code {
   animation: 1s loading ease-in-out infinite;
 }
 
-.loading .box-masonry-content-text, 
-.loading .box-masonry-content-text-near {
+.loading .box-masonry-content-desription, 
+.loading .box-masonry-content-desription-near {
   background-color: #EDEDED;
   background: linear-gradient(100deg,rgba(255,255,255,0)40%,rgba(255,255,255,0.5)50%,rgba(255,255,255,0)60%) #ededed;
   background-size: 200% 100%;
@@ -3002,13 +3002,13 @@ code {
 }
 
 @media (min-width: 576px) {
-.loading .box-masonry-content-text {
+.loading .box-masonry-content-desription {
   font-size: 0.75rem;                       /* 文字大小 */
   margin-top: -0.65rem;                  /* 元素位置偏移 */
   }
 }
 
-.loading .box-masonry-content-text-near {
+.loading .box-masonry-content-desription-near {
   font-size: 0.75rem;                       /* 文字大小 */
   margin-top: -0.65rem;                  /* 元素位置偏移 */
   max-width: 14rem;                         /* 最大宽度 */
@@ -3034,13 +3034,13 @@ code {
   animation-delay: 0.05s;
 }
 
-.loading .box-masonry-content-title h4 {
+.loading .box-masonry-content-text h4 {
   max-width: 5.7rem;
 }
 
 .loading .box-masonry-desription p, 
-.loading .box-masonry-content-text p, 
-.loading .box-masonry-content-text-near p, 
+.loading .box-masonry-content-desription p, 
+.loading .box-masonry-content-desription-near p, 
 .loading .box-masonry-desription li, 
 .loading .box-masonry-content-ver {         /* 隐藏文字 */
   z-index: -1;
