@@ -2989,7 +2989,6 @@ code {
   background-size: 200% 100%;
   background-position-x: 150%;
   animation: 1s loading ease-in-out infinite;
-  max-width: 14rem;                         /* 最大宽度 */
   border-radius: 4px;
   color: rgba(0,0,0,0);                /* 透明度隐藏文字 */
   animation-delay: 0.06s;
@@ -2997,7 +2996,7 @@ code {
 
 .loading .box-masonry-desription {
   min-height: 0.75rem;
-  max-width: 20rem;
+  /* max-width: 20rem;             最大宽度（限制已解除） */
   border-radius: 4px;
   animation-delay: 0.06s;
 }
@@ -3012,6 +3011,7 @@ code {
 .loading .box-masonry-content-text-near {
   font-size: 0.75rem;                       /* 文字大小 */
   margin-top: -0.65rem;                  /* 元素位置偏移 */
+  max-width: 14rem;                         /* 最大宽度 */
 }
 
 @keyframes loading {
@@ -3032,6 +3032,10 @@ code {
   font-size:0;
   overflow:hidden;
   animation-delay: 0.05s;
+}
+
+.loading .box-masonry-content-title h4 {
+  max-width: 5.7rem;
 }
 
 .loading .box-masonry-desription p, 
