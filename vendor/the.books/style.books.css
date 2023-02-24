@@ -46,9 +46,9 @@
 }
 
 .bk-info button {
-	background: #FC756F;
+	background: #EFEFEF;
+	color: #006fc6;
 	border: none;
-	color: #fff;
 	display: inline-block;
 	padding: 3px 15px;
 	font-weight: 700;
@@ -56,7 +56,7 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	margin-right: 4px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+    border-radius: 5px;
 }
 
 .bk-info button.bk-active,
@@ -68,7 +68,8 @@
 
 .no-touch .bk-info button:hover,
 .bk-info button.bk-active {
-	background: #d0544e;
+	background: #006fc6;
+	color: #fff;
 }
 
 .bk-list li .bk-book {
