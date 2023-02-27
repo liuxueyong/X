@@ -40,12 +40,12 @@ input,button {
 	text-transform: uppercase;
 	padding-bottom: 5px;
 	display: block;
-	color: #777;
+	color: #999;
 }
 
 .bk-info p {
 	line-height: 24px;
-	color: #444;
+	color: #999;
 	min-height: 160px;
 }
 
@@ -323,22 +323,28 @@ input,button {
 	user-select: none;
 }
 
+/* 内页按钮 */
 .bk-page nav {
 	display: block;
-	text-align: center;
-	margin-top: 20px;
+	text-align: right;
+	margin-top: 330px;
+	margin-right: 42px;
 	position: relative;
 	z-index: 100;
 	cursor: pointer;
+	user-select: none;
 }
 
 .bk-page nav span {
+	text-align: center;
 	display: inline-block;
-	width: 20px;
+	width: 25px;
 	height: 20px;
 	color: #aaa;
-	background: #f0f0f0;
-	border-radius: 50%;
+}
+
+.bk-page-prev:hover, .bk-page-next:hover {
+	color: #006fc6;
 }
 
 /* Individual style & artwork */
@@ -543,7 +549,7 @@ input,button {
 }
 
 .book-3 .bk-back img {
-	width: 200px;
+	width: 150px;
 	display: block;
 	margin: 30px auto 0;
 }
