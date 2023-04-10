@@ -9,10 +9,6 @@
   font-family: MiLan;
   src:url("../font/MI_LanTing_Regular.ttf")
 }
-@font-face {
-  font-family: PixelFont;
-  src:url("../font/FZ_Pixel_12.ttf")
-}
 
 body { 
   animation: fadeInAnimation ease 1s; 
@@ -118,10 +114,6 @@ section.background-secondary {
 
 .weight-700 {
   font-weight: 700 !important;
-}
-
-.text-pixel {
-  font-family: PixelFont;
 }
 
 .text-gray {
